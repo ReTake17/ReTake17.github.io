@@ -11,7 +11,9 @@
         background-color: #151515;
         font-family: Helvetica;
       }
+      
       .text {color: #cccccc;}
+      
       .modeButton {
         cursor: pointer;
         width: 125px;
@@ -19,8 +21,19 @@
         margin: auto;
         background-color: #abcdef;
       }
-      .modeButton:hover {
-        background-color: #d4e9ff;
+      
+      .modeButton:hover {background-color: #d4e9ff;}
+      
+      .box1 {
+        width: 150px;
+        padding: 10px;
+        margin: 5px 0px 0px 5px;
+      }
+      
+      .box2 {
+        position: absolute;
+        top: 5px;
+        right: 5px
       }
     </style>
     <script type="text/javascript">
@@ -34,7 +47,7 @@
             light()
           }
           else {
-            btn1.value="light mode (ew)";
+            btn1.value="light mode";
             button="t";
             dark()
           }
@@ -55,10 +68,12 @@
       }
     </script>
     <body>
-      <div class="text">
-        <p>hi</p>
-        <p>theres nothing here, for now</p>
+      <div class="text box1">
+        <p style="margin:0px; font-size:25px;">hi</p>
+        <p style="margin:0px;">why are you here :3</p>
       </div>
-      <input class="modeButton" type="button" value="light mode (ew)" id="btn" onclick="mode();"></input>
+      <div class="box2">
+        <input class="modeButton" type="button" value="light mode" id="btn" onclick="mode();"></input>
+      </div>
     </body>
   </html>
