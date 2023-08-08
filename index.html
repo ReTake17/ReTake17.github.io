@@ -6,8 +6,59 @@
       <link rel="icon" href="img/star.ico">
       <title>owo</title>
     </head>
+    <style>
+      body {
+        background-color: #151515;
+        font-family: Helvetica;
+      }
+      .text {color: #cccccc;}
+      .modeButton {
+        cursor: pointer;
+        width: 100px;
+        height: 50px;
+        margin: auto;
+        background-color: #abcdef;
+      }
+      .modeButton:hover {
+        background-color: #d4e9ff;
+      }
+    </style>
+    <script type="text/javascript">
+      var button="t";
+      function mode() {
+        var btn1 = document.getElementById("btn");
+        var bdv = document.getElementsByTagName("BODY")[0];
+          if (button=="t") {
+            btn1.value="dark mode";
+            button="f";
+            light()
+          }
+          else {
+            btn1.value="light mode (ew)";
+            button="t";
+            dark()
+          }
+        function light() {
+          const ltext = document.querySelectorAll(".text");
+          for (let a=0; a<ltext.length; a++) {
+            ltext[a].style.color="#151515";
+            x.style.backgroundColor="white";
+          }
+        }
+        function dark() {
+          const dtext = document.querySelectorAll(".text");
+          for (let b=0; b<dtext.length; b++) {
+            dtext[b].style.color="#cccccc";
+            x.style.backgroundColor="#151515";
+          }
+        }
+      }
+    </script>
     <body>
-      <p>hi</p>
-      <p>why are you here</p>
+      <div class="text">
+        <p>hi</p>
+        <p>theres nothing here, for now</p>
+      </div>
+      <input class="modeButton" type="button" value="light mode (ew)" id="btn" onclick="mode();"></input>
     </body>
   </html>
