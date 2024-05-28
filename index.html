@@ -66,7 +66,7 @@
           }
         }
       }
-	  var input = document.getElementById("input1").innerHTML;
+	  let input = document.getElementById("input1").innerHTML;
 	  function inputbox() {
 	    document.getElementById("output1").innerHTML = input;
 	  }
@@ -80,8 +80,10 @@
           <input type="text" name="input1" id="input1" maxlength="20" size="20"><br>
 		  <input type="button" value="sub" onclick="inputbox();">
         </form>
-		<p style="width:initial">you typed: </p>
-		<p id="output1" style="margin:0px" ></p>
+	  </div>
+	  <div style="margin:0px">
+		<p>you typed: </p>
+		<p id="output1"></p>
       </div>
       <div class="box2">
         <input class="modeButton" type="button" value="light mode" id="btn" onclick="mode();">
